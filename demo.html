@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đỗ Văn Long - Thông tin cá nhân</title>
+    
+    <link rel="stylesheet" href="demo.css"> <!-- Thêm dòng này để liên kết tệp CSS -->
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Icons and Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./ico/favicon-32x32.png">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('https://hoanghamobile.com/tin-tuc/wp-content/webp-express/webp-images/uploads/2024/03/hinh-nen-desktop.jpg.webp') no-repeat center center/cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+            overflow: hidden; /* Ngăn chặn cuộn khi có hoa rơi */
+        }
+
+        .profile-container {
+            width: 90%;
+            max-width: 800px;
+            background-color: #2a2a2acc;
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            position: relative; /* Để hiệu ứng hoa rơi có thể sử dụng */
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #444;
+            padding-bottom: 20px;
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 3px solid #00ffea;
+        }
+
+        .profile-info {
+            text-align: left;
+            width: 100%;
+        }
+
+        .profile-info h2 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .profile-info p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .info-grid {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bank-info-section {
+            margin-top: 20px;
+        }
+
+        .bank-info-section h3 {
+            font-size: 22px;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .bank-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .bank-card {
+            background-color: #333;
+            width: 45%;
+            margin: 10px 0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+            position: relative; /* Để hiệu ứng hoa rơi có thể sử dụng */
+            overflow: hidden; /* Ngăn chặn hoa rơi ra ngoài thẻ */
+        }
+
+        .bank-card:hover {
+            transform: scale(1.05);
+        }
+
+        .bank-card i {
+            font-size: 36px;
+            color: #ea4d7e;
+            margin-bottom: 10px;
+        }
+
+        .bank-card p {
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .bank-card {
+                width: 100%;
+            }
+        }
+
+        /* Hiệu ứng hoa rơi */
+        .flower {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/8628/8628178.png'); /* Hình ảnh hoa */
+            background-size: cover;
+            pointer-events: none; /* Ngăn chặn tương tác với hoa */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/462265893_122108221148076130_6999822998947157805_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=RBxYMxVQuhMQ7kNvgHA_Kxn&_nc_ht=scontent.fhan14-3.fna&_nc_gid=A5Vfy1GRhUrZQD-86imIDMe&oh=00_AYBL-DFM9XvTyTJNBDYbkyd7g5eVLvLgXP3UgI_kKX2qGw&oe=670EED52" alt="Avatar" class="profile-avatar">
+            <div class="profile-info">
+                <h2>Đỗ Văn Long</h2>
+                <p>Software Developer</p>
+                <div class="info-grid">
+                    <p>Email: longswdev366@gmail.com</p>
+                    <p>Điện thoại: 0865936654</p>
+                </div>
+                <div class="info-grid">
+                    <p>Năm sinh: 2006</p>
+                    <p>Địa chỉ: Ninh Bình, Việt Nam</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bank-info-section">
+            <h3>Thông tin ngân hàng</h3>
+            <div class="bank-info">
+                <div class="bank-card" onclick="copyToClipboard('2030686899999')">
+                    <i class="fas fa-university"></i>
+                    <p>MB Bank</p>
+                    <p>Đỗ Văn Long</p>
+                    <p>0865936654</p>
+                </div>
+                <div class="bank-card" onclick="copyToClipboard('2601738567')">
+                    <i class="fas fa-university"></i>
+                    <p>BIDV</p>
+                    <p>Đỗ Văn Long</p>
+                    <p>2601738567</p>
+                </div>
+                <div class="bank-card" onclick="copyToClipboard('0865936654')">
+                    <i class="fas fa-wallet"></i>
+                    <p>Ví Zalo</p>
+                    <p>Đỗ Văn Long</p>
+                    <p>0865936654</p>
+                </div>
+                <div class="bank-card" onclick="copyToClipboard('1049365841')">
+                    <i class="fas fa-university"></i>
+                    <p>VCB</p>
+                    <p>Đỗ Văn Long</p>
+                    <p>1049365841</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Số tài khoản đã được sao chép: ' + text);
+            }).catch(err => {
+                console.error('Có lỗi xảy ra khi sao chép: ', err);
+            });
+        }
+
+        // Hàm tạo hiệu ứng hoa rơi
+        function createFlowerEffect(event) {
+            const flower = document.createElement('div');
+            flower.className = 'flower';
+            document.body.appendChild(flower);
+            flower.style.left = `${event.clientX}px`;
+            flower.style.top = `${event.clientY}px`;
+
+            const randomAnimationDuration = Math.random() * 3 + 2; // Thời gian ngẫu nhiên từ 2 đến 5 giây
+            flower.style.transition = `transform ${randomAnimationDuration}s, opacity ${randomAnimationDuration}s`;
+            flower.style.transform = `translateY(${window.innerHeight}px)`;
+            flower.style.opacity = '0';
+
+            // Xóa hoa sau khi hoàn thành hiệu ứng
+            setTimeout(() => {
+                flower.remove();
+            }, randomAnimationDuration * 1000);
+        }
+
+        // Thêm sự kiện click cho tất cả các thẻ ngân hàng
+        const bankCards = document.querySelectorAll('.bank-card');
+        bankCards.forEach(card => {
+            card.addEventListener('click', createFlowerEffect);
+        });
+    </script>
+</body>
+
+</html>
