@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đỗ Văn Long - Thông tin cá nhân</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./ico/favicon-32x32.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('https://hoanghamobile.com/tin-tuc/wp-content/webp-express/webp-images/uploads/2024/03/hinh-nen-desktop.jpg.webp') no-repeat center center/cover;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: auto;
+        }
+
+        .profile-container {
+            width: 90%;
+            max-width: 800px;
+            background-color: rgba(42, 42, 42, 0.8);
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 2px solid #444;
+            padding-bottom: 20px;
+        }
+
+        .profile-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 3px solid #00ffea;
+        }
+
+        .profile-info {
+            text-align: left;
+            width: 100%;
+        }
+
+        .profile-info h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .profile-info p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .info-grid {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bank-info-section {
+            margin-top: 20px;
+        }
+
+        .bank-info-section h3 {
+            font-size: 22px;
+            font-weight: 500;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .bank-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .bank-card {
+            background-color: #333;
+            width: 45%;
+            margin: 10px 0;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .bank-card:hover {
+            transform: scale(1.05);
+        }
+
+        .bank-card img {
+            width: 40px; /* Kích thước biểu tượng */
+            height: auto; /* Tự động điều chỉnh chiều cao */
+            margin-bottom: 10px;
+        }
+
+        .bank-card p {
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .bank-card {
+                width: 100%;
+            }
+        }
+
+        .flower {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-image: url('https://cdn-icons-png.flaticon.com/512/8628/8628178.png');
+            background-size: cover;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+        }
+
+        .social-icons img {
+            width: 25px; /* Kích thước biểu tượng Facebook nhỏ hơn */
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <div class="profile-header">
+            <img src="https://scontent.fhan14-3.fna.fbcdn.net/v/t39.30808-6/462265893_122108221148076130_6999822998947157805_n.jpg?_nc_cat=110&_nc_sid=6ee11a&_nc_ohc=RBxYMxVQuhMQ7kNvgHA_Kxn&_nc_ht=scontent.fhan14-3.fna&_nc_gid=A5Vfy1GRhUrZQD-86imIDMe&oh=00_AYBL-DFM9XvTyTJNBDYbkyd7g5eVLvLgXP3UgI_kKX2qGw&oe=670EED52" alt="Avatar" class="profile-avatar">
+            <div class="profile-info">
+                <h2>Đỗ Văn Long</h2>
+                <p>Software Developer</p>
+                <div class="info-grid">
+                    <p>Email: longswdev366@gmail.com</p>
+                    <p>Điện thoại: 0865936654</p>
+                </div>
+                <div class="info-grid">
+                    <p>Năm sinh: 2006</p>
+                    <p>Địa chỉ: Ninh Bình, Việt Nam</p>
+                </div>
+            </div>
+        </div>
+            </a>
+        </div>
+
+        <div class="bank-info-section">
+            <h3>Thông tin ngân hàng</h3>
+            <div class="bank-info">
+                <div class="bank-card" onclick="copyToClipboard('2030686899999')">
+                    <img src="https://play-lh.googleusercontent.com/eropcks-sakGkOkCHQzpd87FKK4efHTLY5b93H2FwNLjoPnPcAMSzOHsm3s6lguSgw=w240-h480-rw" alt="MB Bank Logo">
+                    <p>MB Bank</p>
+                    <p>Đỗ Văn Long</p>
+                    <p>2030686899999</p>
+                </div>
+                <div class="bank-card" onclick="copyToClipboard('2601738567')">
+                    <img src="https://cdn6.aptoide.com/imgs/e/8/e/e8eca5ae305dc1522f0ffcab2616df50_icon.png?w=128" alt="BIDV Logo">
+                    <p>BIDV</p>
+                    <p>Đỗ Văn Long</p>
+                    <p>2601738567</p>
+                </div>
+                <div class="bank-card" onclick="copyToClipboard('0865936654')">
+                    <img src="https://scontent.fhan2-4.fna.fbcdn.net/v/t39.30808-6/449481440_872447821701684_7134035183035696807_n.jpg?_nc_cat=1&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=GNVgbRtASfwQ7kNvgGA6K6u&_nc_zt=23&_nc_ht=scontent.fhan2-4.fna&_nc_gid=AzNOMkaJggQZTiIE4UggHzZ&oh=00_AYB_-BOX_po-HdFBwx0nN5DyrJu-Evcw3oTdVtv0PnVSCg&oe=671320EB" alt="Zalo Logo">
+                    <p>Ví Zalo</p>
+                    <p>Đỗ Văn Long</p>
+                    <p>0865936654</p>
+                </div>
+                <div class="bank-card" onclick="copyToClipboard('1049365841')">
+                    <img src="https://cdn.tgdd.vn/2020/04/GameApp/icon-200x200.jpg" alt="VCB Logo">
+                    <p>VCB</p>
+                    <p>Đỗ Văn Long</p>
+                    <p>1049365841</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Số tài khoản đã được sao chép: ' + text);
+            }).catch(err => {
+                console.error('Có lỗi xảy ra khi sao chép: ', err);
+                alert('Có lỗi xảy ra khi sao chép. Vui lòng thử lại!');
+            });
+        }
+
+        // Tạo hiệu ứng hoa rơi
+        function createFlowerEffect() {
+            const flower = document.createElement('div');
+            flower.classList.add('flower');
+            document.body.appendChild(flower);
+
+            // Vị trí ngẫu nhiên khi hoa xuất hiện
+            flower.style.left = Math.random() * window.innerWidth + 'px';
+
+            // Thời gian ngẫu nhiên để hoa rơi
+            flower.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+            // Xóa hoa sau khi kết thúc hiệu ứng
+            setTimeout(() => {
+                flower.remove();
+            }, 5000);
+        }
+
+        // Tạo hiệu ứng hoa rơi liên tục
+        setInterval(createFlowerEffect, 300);
+    </script>
+</body>
+
+</html>
